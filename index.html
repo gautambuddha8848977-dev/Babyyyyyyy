@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Simran 🌹</title>
+
+<!-- Handwritten + parchment fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background: #fbf7f3;
+  color: #4a2c2a;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 60px 30px;
+  line-height: 1.9;
+}
+
+/* Opening line */
+h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 60px;
+  font-family: 'Dancing Script', cursive;
+}
+
+/* Handwritten paragraphs */
+.reveal {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4rem;
+  margin-bottom: 70px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1.4s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Flowing hearts */
+.heart {
+  position: fixed;
+  top: -10%;
+  font-size: 22px;
+  opacity: 0.6;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(120vh);
+  }
+}
+
+/* Rose image */
+.rose-image {
+  margin-top: 90px;
+  text-align: center;
+}
+
+.rose-image img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- OPENING LINE -->
+  <h1>
+    Simran,<br>
+    this rose is for you — with all my love.
+  </h1>
+
+  <p class="reveal">
+    On Rose Day, people give flowers that fade with time.
+    But when I thought of you, I realized I didn’t want to give something temporary.
+    I wanted to give you words that stay, feelings that grow, and love that deepens quietly — day after day, just like us.
+  </p>
+
+  <p class="reveal">
+    Every moment with you has softened my life in ways I never knew I needed.
+    You didn’t change who I am — you made me more myself.
+    With you, even silence feels warm, and even distance feels gentle.
+  </p>
+
+  <p class="reveal">
+    This rose carries everything I don’t always know how to say out loud.
+    It holds my gratitude for you, my respect for you, and my promise to keep choosing you — even on ordinary days, even when life isn’t perfect.
+  </p>
+
+  <p class="reveal">
+    I don’t need grand gestures to love you.
+    I just need you — your presence, your honesty, your heart beside mine.
+    That’s why this rose isn’t just a gift… it’s a reminder.
+  </p>
+
+  <p class="reveal" style="text-align:center;">
+    Happy Rose Day, my wife 🌹<br>
+    You will always be my forever rose.
+  </p>
+
+  <!-- IMAGE PLACE -->
+  <div class="rose-image reveal">
+    <img src="rose.jpg" alt="Rose for Simran">
+  </div>
+
+</div>
+
+<!-- Reveal on scroll (petal-like opening) -->
+<script>
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+  reveals.forEach(el => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+    if (elementTop < windowHeight - 100) {
+      el.classList.add("show");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+</script>
+
+<!-- FLOWING HEARTS ❤️ -->
+<script>
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerText = "❤️";
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 10000);
+}
+
+setInterval(createHeart, 700);
+</script>
+
+</body>
+</html>
